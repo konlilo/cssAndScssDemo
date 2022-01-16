@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .item1 {
+        background: LightSkyBlue;
+      }
+      .item2 {
+        background: LightSalmon;
+      }
+      .item3 {
+        background: PaleTurquoise;
+      }
+      .item4 {
+        background: LightPink;
+      }
+      .item5 {
+        background: PaleGreen;
+      }
+
+      .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        /* undefined */
+
+        /* grid-template-columns: repeat(3,1fr); */
+        grid-template-columns: repeat(3, minmax (90px, 1fr));
+
+        /* undefined */
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+        使用 minmax 函數限制項目大小
+        此外，內置函數 minmax 也可用於設置 grid-template-columns 和 grid-template-rows 的值。
+        它的作用是在網格容器改變大小時限制網格項的大小。 
+        爲此，你需要指定網格項允許的尺寸範圍。 例如：
+        <code>
+            grid-template-columns: 100px minmax(50px, 200px);
+        </code>
+        在上面的代碼中，我們通過 grid-template-columns 添加了兩列，
+        第一列寬度爲 100px，第二列寬度最小值是 50px，最大值是 200px。
+        <hr>
+        請用 minmax 函數替換 repeat 函數中的 1fr，
+        限定其最小值爲 90px，最大值爲1fr。 
+      
+      </pre>
+    <div class="container">
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+      <div class="item4">4</div>
+      <div class="item5">5</div>
+    </div>
+  </body>
+</html>

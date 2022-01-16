@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        /* 10. 加入 .group1 的背景底色，觀察畫面 */
+       .group1{
+        background-color: lightpink;
+       }
+        /* 20. 選擇 group1 底下的 div，設定 float 屬性，並觀察畫面 */
+        .group1>div{
+            float:right;
+        }
+        /* 30. 測試三種可以取消 float 的方法  */
+        /*     a. 在 第二個div 加入 clear屬性  */
+        /*     b. 在 .group1 加入 overflow: hidden; */
+        /*     c. 透過虛擬元素 */
+
+        /* 使用 clear 但被景色會被吃掉 */
+        /* #apple{
+            clear: right;
+        } */
+
+        /* 使用overflow:hidden 可以讓背景色出來，也可以clear ，但須加在父層*/
+        /* .group1 {
+            overflow: hidden;
+        } */
+        .group1::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h3>定義元素的浮動方式 以及 清除浮動影響</h3>
+    <h3><a href="https://www.w3schools.com/css/css_float.asp">CSS Layout - float and clear</a></h3>
+
+    <hr>
+
+    <div class="group1">
+        <div>
+            <p>1</p>
+            <img src="img/like.png" alt="">
+        </div>
+        <div>
+            <p>2</p>
+            <img src="img/like.png" alt="">
+        </div>
+        <div>
+            <p>3</p>
+            <img src="img/like.png" alt="">
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="group1" id="apple">
+        <div>
+            <p>a</p>
+            <img src="img/like.png" alt="">
+        </div>
+        <div>
+            <p>b</p>
+            <img src="img/like.png" alt="">
+        </div>
+        <div>
+            <p>c</p>
+            <img src="img/like.png" alt="">
+        </div>
+    </div>
+
+</body>
+
+</html>

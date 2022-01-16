@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- 10. :nth-child(N) 和 :nth-of-type(N) 是否有差異?  -->
+    <style>
+        p:nth-child(3) {
+            background-color: red;
+        }
+
+        #apple>p:nth-of-type(3) {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <p>apple-1</p>
+    <h1>bee</h1>
+    <p>apple-2</p>
+    <p>apple-3</p>
+    <hr>
+    <div id="apple">
+        <p>apple-1</p>
+        <p>apple-2</p>
+        <p>apple-3</p>
+    </div>
+</body>
+
+</html>

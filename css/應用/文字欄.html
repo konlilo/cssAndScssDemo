@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 1200px;
+            display: flex;
+            margin: 0 auto ;
+            padding: 100px 0;
+        }
+        .container h1{
+            width:400px;
+            text-align: right;
+            padding: 20px 15px 0 0;
+            background-color: gray;
+        }
+        .container h1::after{
+            content: "";
+            display: block;
+            height:4px;
+            width:20px;
+            background-color: blue;
+            margin-left: auto;
+        }
+        .container .txt{
+            width: 800px;
+            column-count: 2;
+            column-gap: 30px;
+
+            line-height: 1.3rem;
+            word-spacing: 0.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>HTML&CSS</h1>
+        <div class="txt">
+            <p>1Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt unde illo nisi praesentium similique
+                odit voluptas debitis, exercitationem sapiente iusto, nihil magni accusamus asperiores. Perspiciatis
+                mollitia explicabo eum assumenda placeat!</p>
+            <p>2Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt unde illo nisi praesentium similique
+                odit voluptas debitis, exercitationem sapiente iusto, nihil magni accusamus asperiores. Perspiciatis
+                mollitia explicabo eum assumenda placeat!</p>
+            <p>3Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt unde illo nisi praesentium similique
+                odit voluptas debitis, exercitationem sapiente iusto, nihil magni accusamus asperiores. Perspiciatis
+                mollitia explicabo eum assumenda placeat!</p>
+        </div>
+    </div>
+</body>
+
+</html>

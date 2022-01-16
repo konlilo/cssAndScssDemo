@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #ccc;
+        }
+        .sideMenu {
+            width: 300px;
+            height: 100vh;
+            background-color: #546377;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 10px 0px 10px #888;
+            position: relative;
+
+            transform: translateX(-100%);
+            transition: 0.5s all linear;
+        }
+        .sideMenu form{
+            margin: 50px 10px 30px 10px;
+            border: 1px solid #fff;
+            border-radius: 100px;
+            display: flex;
+        }
+        .sideMenu form input,
+        .sideMenu form button {
+            border: 0;
+            background-color: transparent;
+            color: #fff;
+            padding: 5px 10px;
+        }
+        .sideMenu form input{
+            width: 230px;
+        }
+        .sideMenu form button{
+            width: 50px;
+        }
+        .sideMenu form input:focus {
+            outline: 0;
+        }
+
+        .sideMenu label {
+            position: absolute;
+            width: 30px;
+            height: 80px;
+            background-color: #000;
+            color: #fff;
+            top: 0;
+            bottom: 0;
+            right: -30px;
+            margin: auto;
+            text-align: center;
+            font-size: 24px;
+            line-height: 80px;
+            border-radius: 0 10px 10px 0;
+        }
+        #sideMenuSwitch {
+            display: none;
+        }
+
+        #sideMenuSwitch:checked + .sideMenu {
+            transform: translateX(0);
+        }
+
+
+
+        nav a {
+            font-size: 1.2rem;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #fff;
+            
+        }
+        nav a .fa {
+            transform: scale(0);
+            transition: 0.3s all linear;
+            margin-right: -1.1rem;
+        }
+        nav a:hover {
+            background-color: rgba(0,0,0,0.4);
+        }
+        nav a:hover .fa {
+            margin-right: 0rem;
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="sideMenuSwitch">
+    <div class="sideMenu">
+        <form>
+            <input type="search" placeholder="請輸入關鍵字">
+            <button><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+        <nav>
+            <a href=""><i class="fa fa-book" aria-hidden="true"> </i>
+                前端班
+            </a>
+            <a href=""><i class="fa fa-book" aria-hidden="true"> </i>
+                java班
+            </a>
+            <a href=""><i class="fa fa-book" aria-hidden="true"> </i>
+                C#班
+            </a>
+            <a href=""><i class="fa fa-book" aria-hidden="true"> </i>
+                AI班
+            </a>
+        </nav>
+        <label for="sideMenuSwitch">
+            <i class="fas fa-chevron-right"></i>
+        </label>
+    </div>
+</body>
+</html>

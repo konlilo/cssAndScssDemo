@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: 0;
+        }
+        figure{
+            /* height: 400px; */
+            width:400px;
+            margin-left: 50px;
+            margin-top: 10px;
+            position: relative;
+        }
+        figure>img{
+            width:100%;
+            
+        }
+        figure>figcaption{
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.6);
+            font-size: 3rem;
+            position: absolute;
+            bottom:50px;
+            display: none;
+        }
+        figure:hover  figcaption{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+        <figure class="box">
+            <img src="./img/sunny.JPG" alt="">
+            <figcaption>千陽號海上行</figcaption>
+        </figure>
+</body>
+</html>

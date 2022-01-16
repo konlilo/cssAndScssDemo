@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+<style>
+    *{
+        margin:0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    #app {
+        width: 100%;
+        height: 100vh;
+        background-color: #888;
+        display: flex;
+        /* flex-direction:row-reverse; */
+        justify-content:center;
+        align-items:center;
+
+        /* 針對多行子元素的對齊 */
+        /* flex-wrap:wrap; */
+        /* align-content:center; */
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+
+        /* 代表主軸長度，與width相似 */
+        /* flex-basis:200px; */
+       
+       
+    }
+
+    .box1 {
+        background-color: #fa0;
+        /* flex-grow: 3; */
+        /* 0我不壓縮 / 1壓縮(預設) */
+        /* flex-shrink: 0; */
+    }
+
+    .box2 {
+        background-color: #0ffa;
+        /* flex-grow: 1; */
+        align-self: flex-start;
+    }
+
+    .box3 {
+        background-color: #faaf;
+        /* flex-grow: 1; */
+    }
+
+
+    /* 10. 試試看用display: flex(父)讓box並排吧 */
+    
+    /* 20. 試試看 flex-grow(子) flex-shrink(子) flex-basis(子) */
+    
+    /* 30. 試試看flex-direction: row-reverse;(父) */
+    
+    /* 40. 試試看flex-direction: column; (父)*/
+
+    /* 50. 使用justify-content(父)看變化,控制主軸的對齊
+    center => space-evenly => space-around => space-between */
+
+    /* 60. 使用align-items(父)看變化, 控制次軸的對齊 */
+    
+    /* 70. 使用align-self子看變化, 控制次軸的對齊 (子)*/
+
+
+    /* 80. 把div增加到9個，觀察box會不會換行 (不會)*/
+
+    /* 90. 加上flex-wrap: wrap; 再看看變化 (父)*/
+
+    /* 100. 加上align-content看變化, 控制多行次軸的對齊 (父)*/
+
+    /* 110. 比較:
+        align-content
+        align-self
+        align-items
+        的差別 
+    */
+</style>
+
+<body>
+    <div id="app">
+        <h1 class="box box1">1</h1>
+        <h1 class="box box2">2</h1>
+        <h1 class="box box3">3</h1>
+        <h1 class="box box1">4</h1>
+        <h1 class="box box2">5</h1>
+        <h1 class="box box3">6</h1>
+        <h1 class="box box1">7</h1>
+        <h1 class="box box2">8</h1>
+        <h1 class="box box3">9</h1>
+    </div>
+ <!-- 
+        flex我認為是最好拿來排版的
+        優點: 
+        1. 彈性排版
+        2. 隨意控制方向(橫向、直向、順向、逆向)
+        3. 對齊很簡單(尤其是垂直置中)
+        4. 三大特性: 
+        flex-grow 延伸比 flex-shrink收縮比
+        flex-basis 基本比 (RWD-響應式網頁)
+        5. 自動幫你算尺寸 
+    -->
+</body>
+
+</html>

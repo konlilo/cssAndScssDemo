@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box-container {
+        display: flex;
+        height: 200px;
+      }
+      #box-1 {
+        background-color: purple;
+        height: auto;
+        flex: 2 2 150px;
+      }
+      #box-2 {
+        background-color: royalblue;
+        height: auto;
+        flex: 1 1 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box-container">
+      <div id="box-1"></div>
+      <div id="box-2"></div>
+    </div>
+
+    <pre>
+        使用 flex 短方法屬性
+上面幾個 flex 屬性有一個簡寫方式。 
+flex-grow、flex-shrink 和 flex-basis 屬性可以在 flex 中一併設置。
+
+例如，flex: 1 0 10px; 
+會把項目屬性設爲 flex-grow: 1;、flex-shrink: 0; 以及 flex-basis: 10px;。
+
+屬性的默認設置是 flex: 0 1 auto;。
+    </pre>
+    <hr />
+    <pre>
+        請給 #box-1 和 #box-2 添加 flex 屬性。 
+        設置 #box-1 的 flex-grow 屬性值爲 2、flex-shrink 屬性值爲 2、flex-basis 屬性值爲 150px。 
+        設置 #box-2 的 flex-grow 屬性值爲 1、flex-shrink 屬性值爲 1、flex-basis 屬性值爲 150px。
+        
+        通過上面的設置，在容器大於 300px 時，#box-1 擴大的空間會是 #box-2 擴大空間的兩倍；
+        在容器小於 300px 時，前者縮小的空間會是 #box-2 縮小空間的兩倍。 
+        300px 是兩個盒子的 flex-basis 屬性值之和。
+    </pre>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/position.css">
+    <style>
+        #reddiv{
+            position: fixed;
+            bottom: 0px;
+            right:0px;
+            
+            background-image: url('./img/onepiece20th_logo.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 設定fixed之後會在原本的位置飄浮起來並且原本的位置不保留，所以綠色跟藍色才會往上跑 -->
+    <!-- top、bottom、left、right時的基準是對照瀏覽器 -->
+    <h3 id="move">position：fixed<br>
+        fixed 沒有設定 top、bottom、left、right時 <br>
+        "預設" 的位置為 為 扣除【父容器】元素內容
+    </h3>
+
+    <div class="demo">
+        我是demo div的元素內容。<br>
+
+        <!-- 10. 將 #reddiv 固定在右下角，並且顯示圖片 -->
+        <!-- 20. 加上超連結，點選之後 -->
+
+        <a href="#move">
+            <div id="reddiv"></div>
+        </a>
+        <div id="greendiv">Green</div>
+        <div id="bluediv">Blue</div>
+    </div>
+
+</body>
+
+</html>

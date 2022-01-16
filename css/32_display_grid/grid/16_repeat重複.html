@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .item1 {
+        background: LightSkyBlue;
+      }
+      .item2 {
+        background: LightSalmon;
+      }
+      .item3 {
+        background: PaleTurquoise;
+      }
+      .item4 {
+        background: LightPink;
+      }
+      .item5 {
+        background: PaleGreen;
+      }
+
+      .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+
+        /* undefined */
+
+        /* grid-template-columns: 1fr 1fr 1fr; */
+
+        /* 將上方 改寫成下面 */
+        grid-template-columns: repeat(3, 1fr);
+
+        /* undefined */
+
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+        使用 repeat 函數減少重複
+使用 grid-template-columns 或 grid-template-rows 定義網格結構時，
+你需要爲添加的每一行或每一列都輸入一個值。
+
+如果一個網格共有 100 行且每行高度相同， 那我們就需要輸入 100 個值，這顯然不太實際。 
+爲此，更好的方式是使用 repeat 方法指定行或列的重複次數，
+後面加上逗號以及需要重複的值。
+<hr>
+以下爲添加 100 行網格的例子，每行高度均爲 50px：
+<code>
+    grid-template-rows: repeat(100, 50px);
+</code>
+你還可以用 repeat 方法重複多個值，並在定義網格結構時與其他值一起使用。 比如：
+<code>
+    grid-template-columns: repeat(2, 1fr 50px) 20px;
+</code>
+效果相當於：
+<code>
+    grid-template-columns: 1fr 50px 1fr 50px 20px;
+</code>
+<span style="color: red;">注意： 1fr 50px 重複了兩次，後面跟着 20px。</span> 
+
+<hr>
+請用 repeat 代替 grid-template-columns 屬性值中的重複代碼。
+    </pre>
+    <div class="container">
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+      <div class="item4">4</div>
+      <div class="item5">5</div>
+    </div>
+  </body>
+</html>

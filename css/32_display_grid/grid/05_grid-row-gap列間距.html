@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .d1 {
+      background: LightSkyBlue;
+    }
+    .d2 {
+      background: LightSalmon;
+    }
+    .d3 {
+      background: PaleTurquoise;
+    }
+    .d4 {
+      background: LightPink;
+    }
+    .d5 {
+      background: PaleGreen;
+    }
+
+    .container {
+      font-size: 40px;
+      min-height: 300px;
+      width: 100%;
+      background: LightGray;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      /* 列的間隔 */
+      grid-row-gap: 10px;
+    }
+  </style>
+  <body>
+    <pre>
+        使用 grid-row-gap 創建多行之間的間距
+和上個挑戰在兩列之間添加間距一樣，我們還可以用 grid-row-gap 設置行間距。
+<hr>
+請爲網格中的行添加高度爲 10px 的間距。
+<hr>    
+</pre>
+    <div class="container">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+// :root {
+//   --primary-color: #623df2;
+//   --accent-color: #ff652f;
+//   --text-color: #fff;
+// }
+
+// body {
+//   background: var(--primary-color);
+// }
+
+@import "./ressets";
+@import "./variables";
+
+// @function 用於計算值 和 return
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+// mixins 用於定義樣式
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: $direction;
+}
+
+@mixin theme($light-theme: true) {
+  // if 判斷式
+  @if $light-theme {
+    background: lighten($primary-color, 100%);
+    color: darken($text-color, 100%);
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+body {
+  background: $primary-color;
+  color: $text-color;
+  font-weight: map-get($font-weights, bold);
+}
+
+.main {
+  @include flexCenter(row);
+  width: 80% - 40%; //可直接相減，不用使用 calc(80% - 20%) 運算;
+  margin: 0 auto;
+
+  // #{&}__paragraph1 =>曹套 .main .main__paragraph1
+  #{&}__paragraph1 {
+    // &__paragraph1 {
+    // font-weight: map-get($font-weights, bold);
+    font-weight: weight(regular);
+
+    // $=>上一層的class元素複製  .main .main__paragraph1:hover
+    &:hover {
+      color: rgb(235, 139, 13);
+    }
+  }
+
+  #{&}__paragraph2 {
+    // @extend繼承樣式
+    @extend .main__paragraph1;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.light {
+  @include theme($light-theme: false);
+}

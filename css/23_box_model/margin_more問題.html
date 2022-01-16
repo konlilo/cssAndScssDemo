@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1{
+            width: 50%;
+            height: 100px;
+            background-color: burlywood;
+
+            /* 使用padding 解決 */
+            /* padding-top: 1px; */
+
+            /* 使用Border解決 */
+            /* border: 1px solid red; */
+            border: 1px solid rgb(0,0,0,0);
+        }
+          /* 推出父層 */
+        .d2{
+            width: 50%;
+            height: 100px;
+            background-color: #aff;
+            /* 使用padding 解決 */
+            /* margin-top: 99px; */
+
+            /* 使用Border解決 */
+            margin-top: 100px;
+        }
+        .d3{
+            width: 50%;
+            height: 100px;
+            background-color: pink;
+        }
+        .d4{
+            background-color: red;
+            width: 30%;
+            height: 100px;
+
+            /* 區塊置中   上下:0  左右:auto */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">
+        <div class="d2"></div>
+        <div class="d3"></div>
+    </div>
+   
+    <br><br><br><br><br><br><br><br>
+    <hr>
+    <br><br><br><br><br><br><br><br>
+    <div class="d4">apple</div>
+</body>
+</html>

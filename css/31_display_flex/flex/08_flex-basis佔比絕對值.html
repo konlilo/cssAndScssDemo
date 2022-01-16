@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box-container {
+        display: flex;
+        height: 200px;
+        width: auto;
+      }
+      #box-1 {
+        background-color: pink;
+        height: auto;
+        flex-basis: 10rem;
+        /* 佔比 要給精確的值和單位 */
+      }
+      #box-2 {
+        background-color: purple;
+        height: auto;
+        flex-basis: 20rem;
+        /* 佔比 要給精確的值和單位 */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box-container">
+      <div id="box-1"></div>
+      <div id="box-2"></div>
+    </div>
+    <pre>
+        使用 flex-basis 屬性設置元素的初始大小
+        
+flex-basis 屬性定義了在使用 CSS 的 flex-shrink 或 flex-grow 屬性對元素進行調整前，
+元素的初始大小。
+
+flex-basis 屬性的單位與其他表示尺寸的屬性的單位一致（px、em、% 等）。 
+如果值爲 auto，則項目的尺寸隨內容調整。
+    </pre>
+  </body>
+</html>

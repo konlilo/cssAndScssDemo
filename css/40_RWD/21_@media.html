@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 20. 開啟瀏覽器 > 檢查 > 點選不同的行動裝置，查看這個標籤的效果 -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+    <style>
+        div {
+            font-size: 3rem;
+        }
+        /* 10. @media screen：隨著裝置畫面不同，網頁會自動對應不同的css*/
+        
+        /* >1000 */
+        @media only screen and (min-width: 1000px) {
+            div {
+                background-color: lightpink;
+            }
+            div::before{
+                content: "width>1000";
+            }
+        }
+        /* 700-1000 */
+        @media only screen and (min-width: 700px) and (max-width:1000px) {
+            div {
+                background-color: lightgreen;
+            }
+            div::before{
+                content: "700<width<1000";
+            }
+        }
+        
+        /* 700以下 */
+        @media only screen and (max-width: 700px) {
+            div {
+                background-color: lightblue;
+            }
+            h3 {
+                display: none;
+            }
+            div::before{
+                content: "700<width";
+            }
+        }
+        /* min-width：表示設定數值「大於等於」、「以上」*/
+        /* max-width：表示設定數值「小於等於」、「以下」 */
+        
+    </style>
+</head>
+
+<body>
+
+    <h3>Responsive Web Design - Media Queries</h3>
+    <h3><a href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp">https://www.w3schools.com/css/css_rwd_mediaqueries.asp</a></h3>
+
+    <div></div>
+
+</body>
+
+</html>

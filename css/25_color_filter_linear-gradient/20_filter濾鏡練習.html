@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            height: 200px;
+            width: 200px;
+        }
+        #blue:checked ~ #catImg{
+            filter: blur(5px);
+        }
+        #invert:checked~ #catImg{
+            filter: invert(100%);
+        }
+        #sepia:checked ~ #catImg{
+            filter: sepia(100%);
+        }
+    
+    </style>
+</head>
+
+<body>
+    <input type="radio" id="blue" name="filter">
+    <label for="blue">blue(5px)</label>
+    <input type="radio" id="invert" name="filter">
+    <label for="invert">inver(100%)</label>
+    <input type="radio" id="sepia" name="filter">
+    <label for="sepia">sepia(100%)</label>
+    <img src="./img/cat.jpeg" alt="" id="catImg">
+
+
+</body>
+
+</html>

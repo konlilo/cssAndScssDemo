@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 10. 請試著加入 css  */
+        /*      讓文字在滑鼠經過時才顯示 */
+
+        /* 文字的背景是透明但文字沒有透明 */
+        figure {
+            width: 477px;
+        }
+
+        img {
+            width: 100%;
+        }
+        figcaption{
+            font-size: 3rem;
+        }
+        /* 文字預設要隱藏，滑鼠經過圖片的時候才顯示 */
+        .desc {
+            /* 可使用display: none; */
+            /* display: none; */
+            visibility: hidden;
+        }
+
+        /* 使用此方法會有滑到文字時，會消失的問題 */
+        /* img:hover + figcaption {
+            display: block;
+        } */
+        
+        figure:hover>figcaption{
+            /* 可使用display: none;  搭配block */
+            /* display: block; */
+            visibility: visible;
+        }
+        /* 文字要疊在圖片上面 */
+        figure {
+            position: relative;
+        }
+        .desc {
+            position: absolute;
+            bottom: 50px;
+            background-color: rgba(255,255,255,0.6);
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <figure>
+        <img src="img/sunny.JPG">
+        <figcaption class="desc">千陽號海上行</figcaption>
+    </figure>
+
+</body>
+
+</html>

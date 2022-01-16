@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box-container {
+        background: gray;
+        display: flex;
+        height: 500px;
+        flex-wrap: wrap;
+        /* flex-wrap:wrap-reverse; */
+      }
+      #box-1 {
+        background-color: dodgerblue;
+        width: 25%;
+      }
+
+      #box-2 {
+        background-color: orangered;
+        width: 25%;
+      }
+      #box-3 {
+        background-color: violet;
+        width: 25%;
+      }
+      #box-4 {
+        background-color: yellow;
+        width: 25%;
+      }
+      #box-5 {
+        background-color: green;
+        width: 25%;
+      }
+      #box-6 {
+        background-color: black;
+        width: 25%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box-container">
+      <div id="box-1"></div>
+      <div id="box-2"></div>
+      <div id="box-3"></div>
+      <div id="box-4"></div>
+      <div id="box-5"></div>
+      <div id="box-6"></div>
+    </div>
+
+    <pre>
+        使用 flex-wrap 屬性包裹一行或一列
+CSS flexbox 有一個把 flex 子元素拆分爲多行（或多列）的特性。 默認情況下，flex 容器會調整項目大小，把它們都塞到一起。 對於行來說，所有項目都會在一條直線上。
+
+不過，使用 flex-wrap 屬性可以使項目換行展示。 這意味着多出來的子元素會被移到新的行或列。 換行發生的斷點由子元素和容器的大小決定。
+
+換行方向的可選值有這些：
+
+nowrap：默認值，不換行。
+wrap：如果排列以行爲基準，就將行從上往下排列；如果排列以列爲基準，就將列從左往右排列。
+wrap-reverse：如果排列以行爲基準，就將行從下往上排列；如果排列以列爲基準，就將列從右往左排列。
+    </pre>
+  </body>
+</html>

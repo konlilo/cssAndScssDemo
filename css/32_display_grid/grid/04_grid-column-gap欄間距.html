@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .d1 {
+        background: LightSkyBlue;
+      }
+      .d2 {
+        background: LightSalmon;
+      }
+      .d3 {
+        background: PaleTurquoise;
+      }
+      .d4 {
+        background: LightPink;
+      }
+      .d5 {
+        background: PaleGreen;
+      }
+
+      .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        /* 欄位間隔 */
+        grid-column-gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+      使用 grid-column-gap 創建多列之間的間距
+目前爲止，在你所創建的網格中，每列都相互緊挨着。 有時候你想要列之間有一個間距。 
+如果需要在列與列之間添加一些間距，我們可以使用 grid-column-gap：
+
+grid-column-gap: 10px;
+這會爲我們創建的所有列之間都添加 10px 的空白間距。
+<hr>
+請爲網格中的所有列添加寬度爲 20px 的間距。
+<hr>
+
+    </pre>
+    <div class="container">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
+    </div>
+  </body>
+</html>

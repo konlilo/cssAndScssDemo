@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .item1 {
+        background: LightSkyBlue;
+      }
+      .item2 {
+        background: LightSalmon;
+      }
+      .item3 {
+        background: PaleTurquoise;
+      }
+      .item4 {
+        background: LightPink;
+      }
+
+      .item5 {
+        background: PaleGreen;
+        /* undefined */
+        /*  grid-area:(row起始/column起始/row終點/column終點) */
+        grid-area: 3/1/4/4;
+
+        /* undefined */
+      }
+
+      .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+        使用 grid-area 創建區域模板
+我們在上一次挑戰中學到的 grid-area 屬性還有另一種使用方式。 
+如果網格中沒有定義區域模板，你也可以像這樣爲它添加一個模板：
+
+item1 { grid-area: 1/1/2/4; }
+這裏使用了你之前學習的網格線編號來定義網格項的區域。 
+上例中數字代表這些值：
+
+grid-area: 
+(row起始/column起始/row終點/column終點)
+horizontal line to start at / vertical line to start at / horizontal line to end at / vertical line to end at;
+因此，示例中的網格項將佔用第 1 條水平網格線（起始）和第 2 條水平網格線（終止）之間的行，及第 1 條垂直網格線（起始）和第 4 條垂直網格線（終止）之間的列。
+<hr>
+請用 grid-area 屬性
+將 class 爲 item5 的元素放置在第 3 條和第 4 條水平網格線，
+以及第 1 條和第 4 條垂直網格線之間的區域內。
+    </pre>
+    <div class="container">
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+      <div class="item4">4</div>
+      <div class="item5">5</div>
+    </div>
+  </body>
+</html>

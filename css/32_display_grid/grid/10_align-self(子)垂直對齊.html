@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .item1 {
+        background: LightSkyBlue;
+      }
+      .item2 {
+        background: LightSalmon;
+      }
+
+      .item3 {
+        background: PaleTurquoise;
+        /*align-self:  (start、 center 、 end) */
+        align-self: end;
+      }
+
+      .item4 {
+        background: LightPink;
+      }
+      .item5 {
+        background: PaleGreen;
+      }
+
+      .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+                使用 align-self 垂直對齊項目
+        正如能設置網格項沿水平方向的對齊方式一樣，
+        我們也可以設置網格項沿豎直方向的對齊方式。 
+        爲此，我們可以對網格項使用 align-self 屬性來實現。 
+        在上一個挑戰中適用於 justify-self 屬性的屬性值同樣也可用於這個屬性。
+        <hr>
+        請使用值 end 來讓 class 爲 item3 的網格項沿底端對齊。
+      </pre>
+    <div class="container">
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+      <div class="item4">4</div>
+      <div class="item5">5</div>
+    </div>
+  </body>
+</html>

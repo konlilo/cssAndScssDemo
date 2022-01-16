@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .d1 {
+        background: LightSkyBlue;
+      }
+      .d2 {
+        background: LightSalmon;
+      }
+      .d3 {
+        background: PaleTurquoise;
+      }
+      .d4 {
+        background: LightPink;
+      }
+      .d5 {
+        background: PaleGreen;
+      }
+
+      .container {
+        font-size: 40px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+
+        /* undefined */
+        grid-template-columns: 100px 100px 100px;
+        /* undefined */
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+        使用 grid-template-columns 添加多列
+        簡單地添加一個網格元素並不會有任何明顯的效果。 你還需要明確網格的結構。
+         在一個網格容器中使用 grid-template-columns 屬性可以添加一些列，示例如下：
+        <code>
+            .container {
+                display: grid;
+                grid-template-columns: 50px 50px;
+            }
+        </code>
+        上面的代碼會在網格容器中添加兩列，寬度均爲 50px。 
+        grid-template-columns 屬性值的個數表示網格的列數，每個值表示相應的列寬度。
+      </pre>
+    <hr />
+    請給網格容器設置三個列，每列寬度均爲 100px。
+    <hr />
+
+    <div class="container">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
+    </div>
+  </body>
+</html>

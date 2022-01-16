@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* :root{
+            font-size: 32px;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <h4>比較 em 和 rem 的差異</h4>
+    <p>Apple-1</p>
+    <p style="font-size:16px;">Apple-2</p>
+    <p style="font-size:1em;">Apple-3</p>
+    <p style="font-size:1rem;">Apple-4</p>
+
+
+    <br><br><br><br><br><br>
+
+
+    <!-- 10. 測試 #div1 調整字型為 3em ； #div1child 調整字型為 1em -->
+    <div id="div1" style="font-size: 2em;">
+        <!-- 此div層字體為2*2em=4em，他會巢狀相乘，也會受root影響 -->
+        <div id="div1child" style="font-size: 2em;">測試 em - 2</div>
+    </div>
+
+    <hr>
+
+    <!-- 20. 測試 #div2 調整字型為 3rem ； #div2child 調整字型為 1rem -->
+    <div id="div2" style="font-size: 3rem;">
+        <!-- 此層div則為原rem，不受巢狀相乘影響，只會受root影響 -->
+        <div id="div2child" style="font-size: 4rem;">測試 em - 2</div>
+    </div>
+
+</body>
+
+</html>

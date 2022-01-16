@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .grid-container>div {
+            border: 1px solid black;
+            margin: 5px;
+        }
+
+        .grid-container {
+            display: grid;
+            /* 10. 透過 fr 依照比例設定欄位寬度 */
+            /*     fr = fraction */
+            grid-template-columns: 1fr 2fr 3fr;
+            /* 20. 透過 repeat(重覆幾次, 重覆的寬度) */
+            /* grid-template-columns: repeat(3, 1fr); */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    .grid-container>div{
+        /* 網格內裡面的內容選到的自己對齊 */
+        /* width:50px;
+        height:50px; */
+        background-color: #aaf;
+        border: 20px solid #fa0;
+        font-size: 30px;
+
+    }
+    .item1{
+        /* 網格內裡面的內容選到的自己對齊 */
+        /* align-self: center;
+        justify-self: center; */
+        
+    }
+    .grid-container{
+        width: 960px;
+        height: 450px;
+        border: 8px solid red;
+        display: grid;
+        padding: 10px;
+        row-gap: 10px;
+        column-gap: 50px;
+
+        grid-template-columns: repeat(3,100px);
+        grid-template-rows: repeat(3,100px);
+    
+        /* 決定順序 */
+        /* grid-auto-flow: column; */
+
+        /* justify水平對齊 */
+        /* 把網格內的所有項目打包起來對齊 */
+        /* justify-content: center; */
+        /* align垂直對齊 */
+        /* align-content: center; */
+        
+        /* 網格內裡面的內容對齊 */
+        /* justify-items:center; */
+        /* align-items: center; */
+
+    }
+    /* self(子) contern(父) items(父) */
+</style>
+<body>
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%, 0 20%);
+            margin: 50px 100px;
+        }
+
+        .d1 {
+            background: radial-gradient(circle, white 0%, rgba(255, 0, 0, 0.5) 10%);
+            position: absolute;
+        }
+
+        .d2 {
+            background: radial-gradient(circle, white 0%, rgba(0, 255, 0, 0.5) 10%);
+            position: absolute;
+            transition-property:all;
+            /* 10. 練習和測試 2D 相關的設定值 */
+
+            /* 平移 */
+            /* transform: translateX(50%); */
+            /* transform: translateY(-50px); */
+            /* transform: translateX(100px); */
+            /* transform: translateY(50px); */
+            
+            /* 平移 (水平 X軸,垂直 Y軸) */
+            /* transform: translate(50px, 50px); */
+
+            /* 縮放 */
+            /* transform: scaleX(2); */
+            /* transform: scaleY(2); */
+            /* transform: scale(2); */
+
+            /* transform: scaleX(0.5); */
+            /* transform: scaleY(0.5); */
+            /* transform: scale(0.5); */
+
+            /* 旋轉 (角度)*/
+            /* transform: rotate(20deg); */
+            /* transform: rotate(-20deg); */
+
+            /* 歪斜 */
+            /* transform: skewX(20deg); */
+            /* transform: skewY(-20deg); */
+            /* transform: skew(20deg, 20deg); */
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h3><a href="http://www.w3schools.com/css/css3_2dtransforms.asp" target="_blank">CSS 2D Transforms</a></h3>
+    <h3><a href="https://www.w3schools.com/cssref/css3_pr_transform.asp">CSS transform Property</a></h3>
+
+    <hr>
+
+    <div class="d1"></div>
+    <div class="d2"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: lightgreen;
+        }
+        /* 小於等於600 */
+        @media only screen and (max-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+            p {
+                color: #fa0;
+            }
+        }
+        /* 大於等於1000 */
+        @media only screen and (min-width: 1000px) {
+            body{
+                background-color: #000;
+            }
+        }
+        /* 800到1000之間 */
+        @media only screen and (min-width: 800px) and (max-width: 1000px) {
+            body {
+                background-color: #fa0;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <p>Resize the browser window. When the width of this document is 600 pixels or less, the background-color is
+        "lightblue", otherwise it is "lightgreen".</p>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .d1 {
+        background: LightSkyBlue;
+      }
+      .d2 {
+        background: LightSalmon;
+      }
+      .d3 {
+        background: PaleTurquoise;
+      }
+      .d4 {
+        background: LightPink;
+      }
+      .d5 {
+        background: PaleGreen;
+      }
+
+      .container {
+        font-size: 40px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        /* undefined */
+        grid-template-rows: 50px 50px;
+
+        /* undefined */
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+        使用 grid-template-rows 添加多行
+        在上個挑戰中，你創建的網格會自動設置行數。 要
+        手動調整行，請使用 grid-template-rows 屬性，
+        就像在上一個挑戰中使用 grid-template-columns 屬性一樣。
+      </pre
+    >
+    <hr />
+    請給網格添加兩行，使每行高度均爲 50px。
+    <hr />
+    <div class="container">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
+    </div>
+  </body>
+</html>

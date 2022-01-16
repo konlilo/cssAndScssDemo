@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;  
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .app{
+            width: 100%;
+            overflow: hidden;
+        }
+        .item {
+            float: left;
+            position: relative;
+            /* background-color: red; */
+        }
+        .item img {
+            width: 100%;
+
+            /* 因為img是inline-block屬性 會有間隔 所以要處理 */
+            
+            display: block;
+            /* vertical-align: top; */
+
+            /* 以上兩種方法都行 */
+        }
+        .item:first-child{
+            width: 50%;
+        }
+        .item:first-child ~ .item {
+            width: 25%;
+        }
+        .item .txt {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item:hover .txt {
+            display: flex;
+        }
+        .item h3 {
+            margin-bottom: 0.4rem;
+        }
+
+        .item p {
+            line-height: 1.7rem;
+        } 
+    </style>
+</head>
+<body>
+    <div class="app">
+
+        <div class="item">
+            <img src="./img/dog.jpeg" alt="">
+            <div class="txt">
+                <h3>前端養成班</h3>
+                <p>
+                    只要學員吸收良好，就能達到就業所需職能養成。
+                    能獨立完成設計個人網站以及與小組協同完成電商網站。
+                </p>
+            </div>
+        </div>
+
+
+        <div class="item">
+            <img src="./img/cat.jpeg" alt="">
+            <div class="txt">
+                <h3>前端養成班</h3>
+                <p>
+                    只要學員吸收良好，就能達到就業所需職能養成。
+                </p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="./img/rabbit.jpeg" alt="">
+            <div class="txt">
+                <h3>前端養成班</h3>
+                <p>
+                    只要學員吸收良好，就能達到就業所需職能養成。
+                </p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="./img/dog.jpeg" alt="">
+            <div class="txt">
+                <h3>前端養成班</h3>
+                <p>
+                    只要學員吸收良好，就能達到就業所需職能養成。
+                </p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="./img/cat.jpeg" alt="">
+            <div class="txt">
+                <h3>前端養成班</h3>
+                <p>
+                    只要學員吸收良好，就能達到就業所需職能養成。
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

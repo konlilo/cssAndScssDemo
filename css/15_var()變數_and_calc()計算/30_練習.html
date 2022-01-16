@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        div {
+            font-size: 6rem;
+            padding: 50px;
+            margin-bottom: 50px;
+        }
+
+        /* 10. 請執行網頁，察看結果 */
+        /*     rgb( 紅色, 綠色, 藍色 )；數值介於 0-255 之間 */
+        .demo1 {
+            background-color: rgb(255, 0, 0);
+            color: rgb(255, 255, 255);
+        }
+
+        /* 20. 宣告變數，並透過 var() 帶入顏色數值 */
+        .demo2 {
+            --apple:255;
+            background-color:rgb(var(--apple), 0, 0) ;
+            color: rgb(255, 255, 255);
+        }
+
+        /* 30. 透過 hsl() 設定顏色，並使用 var() 和 calc() 製造相對色 */
+        /*     hsl(色調, 飽和度, 亮度) => (0~360, 0~100%, 0~100%)*/
+        .demo3 {
+            --bee:60;
+            background-color: hsl(var(--bee) , 100%, 50%);
+            color: hsl(calc(var(--bee) + 180), 100%, 50%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="demo1">Apple</div>
+    <div class="demo2">Apple</div>
+    <div class="demo3">Apple</div>
+
+</body>
+
+</html>

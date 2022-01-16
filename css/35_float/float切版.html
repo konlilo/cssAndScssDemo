@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .box {
+            float: left;
+            position: relative;
+            background-color: red;
+        }
+
+        .box>img {
+            width: 100%;
+
+            /* 圖片文字受inline-block影響， 
+            所以需改成block */
+            display: block;
+        }
+
+        .box:first-child {
+            width: 50%;
+        }
+
+        .box:first-child~.box {
+            width: 25%;
+        }
+
+        .box .txt {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            
+        }
+        .box:hover .txt{
+            display: flex;
+        }
+        .box h3{
+            margin-bottom: 0.4rem;
+        }
+
+        .item p{
+            line-height: 1.7rem;
+        }
+    </style>
+</head>
+<div class="main">
+    <div class="box">
+        <img src="./img/dog.jpeg" alt="">
+        <div class="txt">
+            <h3>方塊酥切版</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus dolores maxime libero! Hic, nam
+                voluptates corporis tempore quibusdam</p>
+        </div>
+    </div>
+    <div class="box">
+        <img src="./img/cat.jpeg" alt="">
+        <div class="txt">
+            <h3>方塊酥切版</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+        </div>
+    </div>
+    <div class="box">
+        <img src="./img/rabbit.jpeg" alt="">
+        <div class="txt">
+            <h3>方塊酥切版</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+        </div>
+    </div>
+    <div class="box">
+        <img src="./img/dog.jpeg" alt="">
+        <div class="txt">
+            <h3>方塊酥切版</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </div>
+    </div>
+    <div class="box">
+        <img src="./img/cat.jpeg" alt="">
+        <div class="txt">
+            <h3>方塊酥切版</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+        </div>
+    </div>
+</div>
+
+<body>
+
+</body>
+
+</html>

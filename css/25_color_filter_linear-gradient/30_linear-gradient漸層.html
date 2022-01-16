@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>linear-gradient</title>
+    <style>
+        div {
+            width: 300px;
+            height: 100px;
+        }
+
+        /* 10. 測試漸層效果：linear-gradient & radial-gradient */
+        #example1 {
+            background: linear-gradient(red,yellow);
+        }
+        #example2 {
+            background: linear-gradient(to right,red,yellow);
+        }
+        #example3 {
+            background: linear-gradient(to bottom right,red,yellow);
+        }
+        #example4{
+            background: linear-gradient(red,yellow,green,orange,blue);
+        }
+        #example5 {
+            /* 放射狀 */
+            background: radial-gradient(red,yellow);
+        }
+        #example6{
+            /* deg為角度 後面50%為從中間開始 */
+            background: linear-gradient(90deg, red 50% , blue 50%);
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h3><a href="https://www.w3schools.com/css/css3_gradients.asp" target="_blank">CSS Gradients</a></h3>
+    <h3>取得漸層效果的小工具：<a href="https://cssgradient.io/" target="_blank">https://cssgradient.io/</a></h3>
+    
+    <hr>
+    <div id="example1">example1(default)</div>
+    <hr>
+    <div id="example2">example2(to right)</div>
+    <hr>
+    <div id="example3">example3(to bottom right)</div>
+    <hr>
+    <div id="example4">example4(multiple color)</div>
+    <hr>
+    <div id="example5" style="height:300px;">example5(radial-gradient)</div>
+    <hr>
+    <div id="example6">example6(deg)</div>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>

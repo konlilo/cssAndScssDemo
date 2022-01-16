@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .grid-container>div {
+            background-color: lightpink;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .grid-container {
+            /* 10. 先觀察畫面呈現 */
+            background-color: lightskyblue;
+
+            /* 20. 加入 display: grid; 和 padding: 10px; */
+            display: grid;
+            padding: 10px;
+            /* 30. 設定框線 column-gap 左右、row-gap 上下 距離*/
+            /* column-gap: 10px;
+            row-gap: 10px; */
+            /* 31. grid-gap 同時設定 column-gap 和 row-gap */
+            gap:10px ;
+            /* grid-gap: 10px;  跟 gap:10px 相同意思*/
+            /* 40. grid-template-areas 賦予網格名稱*/
+            /*     a. 賦予網格名稱時候，會自動分割 column */
+            /*     b. 使用 . 來代替未命名的空間 */
+            /*     c. 空間需要連續，不能分離 */
+            grid-template-areas: 
+            "myHeader myHeader myHeader"
+            "AD AD ."
+            "AD AD ."
+            ". CE CE"
+            ". . .";
+        }
+
+        .item1 {
+            /* 50. 透過 grid-area 指定選取到的項目，要放到網格的哪一個位置 */
+            grid-area:myHeader;
+            background-color: #fa0;
+        }
+
+        .item2 {
+            /* 51. 透過 grid-area 指定選取到的項目，要放到網格的哪一個位置 */
+            grid-area:AD;
+            background-color: #afa;
+        }
+        .item3 {
+            /* 51. 透過 grid-area 指定選取到的項目，要放到網格的哪一個位置 */
+            grid-area:CE;
+            background-color: #aff;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <h3><a href="https://www.w3schools.com/css/css_grid_item.asp">CSS Grid Item</a></h3>
+
+    <hr>
+
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 10. text-align 水平方向的對齊方式 */
+        h3:nth-of-type(2) {
+            text-align: justify;
+        }
+        /* text-align: justify 在<p>標籤多文字時，改變瀏覽器寬度才看得出來 */
+        p {
+            text-align: justify;
+        }
+        /* 20. vertical-align 垂直方向的對齊方式 */
+        div {
+            line-height: 5rem;
+        }
+        #img2 {
+            /* 字靠上，受line-height引響 */
+            vertical-align: top;
+        }
+        #img3 {
+            /* 跟圖貼齊 不受引響 */
+            vertical-align: text-top;
+        }
+        #img4 {
+            vertical-align: middle;
+        }
+        #img5 {
+            /* 字靠下，受line-height引響 */
+            vertical-align: bottom;
+        }
+        #img6 {
+            /* 跟圖貼齊 不受引響 */
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 底下是文字產生器產生的文字 -->
+    <h3>Apple</h3>
+    <h3>Apple</h3>
+    <hr>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis
+    blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut
+    </p>
+    <br><br><br><br><br><br>
+    <hr>
+    <div> img1 ipsum <img src="./images/cat.jpg" alt=""> dolor sit amet</div>
+    <hr>
+    <div> img2 ipsum <img id="img2" src="./images/cat.jpg" alt=""> dolor sit amet</div>
+    <hr>
+    <div> img3 ipsum <img id="img3" src="./images/cat.jpg" alt=""> dolor sit amet</div>
+    <hr>
+    <div> img4 ipsum <img id="img4" src="./images/cat.jpg" alt=""> dolor sit amet</div>
+    <hr>
+    <div> img5 ipsum <img id="img5" src="./images/cat.jpg" alt=""> dolor sit amet</div>
+    <hr>
+    <div> img6 ipsum <img id="img6" src="./images/cat.jpg" alt=""> dolor sit amet</div>
+    <hr>
+    <br><br><br><br><br><br>
+</body>
+
+</html>

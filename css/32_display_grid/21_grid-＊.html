@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        img {
+            width: 50vw;
+        }
+    </style>
+    <style>
+        .grid-container>div {
+            background-color: lightpink;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .grid-container {
+            background-color: lightskyblue;
+            display: grid;
+            padding: 10px;
+            row-gap: 10px;
+            column-gap: 50px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        .grid-container>div:nth-of-type(1){
+            /* grid-column-start: 1;
+            grid-column-end: 3; */
+            /* grid-column: 1/4 */
+        }
+        .grid-container>div:nth-of-type(3){
+            grid-row: 2/4;
+            
+        }
+        /* 挑選 .grid-container 底下的 div 進行底下樣式的測試 */
+        /*  10. grid-column-start 和 grid-column-end*/
+        /*  15. grid-column  */
+
+        /*  20. grid-row-start 和 grid-row-end */
+        /*  25. grid-row */
+    </style>
+</head>
+
+<body>
+
+    <h3>透過 grid-column 和 grid-row 設定元素佔據範圍</h3>
+    <h3>如果沒有預設的格線，將會自動畫出"隱形"格線</h3>
+    <h3><a href="https://www.w3schools.com/cssref/pr_grid-column.asp">CSS grid-column Property</a></h3>
+    <h3><a href="https://www.w3schools.com/cssref/pr_grid-row.asp">CSS grid-row Property</a></h3>
+
+    <hr>
+
+    <div class="grid-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+
+</body>
+
+</html>

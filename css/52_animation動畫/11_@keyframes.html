@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(to bottom right, #fa0, #aaf);
+        font-size: 4.5rem;
+        text-align: center;
+        line-height: 100px;
+      }
+      /* 10. 透過 @keyframes 定義一組動畫樣式  */
+      @keyframes apple {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      /* 20. 指定元素套用動畫 */
+      div {
+        animation-name: apple;
+        animation-duration: 2s;
+
+        animation-iteration-count: infinite;
+        /* infinite 循環播放 */
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3>透過 @keyframes 定義一組動畫樣式</h3>
+    <h3>
+      <a href="http://www.w3schools.com/css/css3_animations.asp" target="_blank"
+        >CSS Animations</a
+      >
+    </h3>
+    <br /><br /><br /><br />
+    <div></div>
+  </body>
+</html>

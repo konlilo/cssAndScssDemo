@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .d1 {
+        background: LightSkyBlue;
+      }
+      .d2 {
+        background: LightSalmon;
+      }
+      .d3 {
+        background: PaleTurquoise;
+      }
+      .d4 {
+        background: LightPink;
+      }
+      .d5 {
+        background: PaleGreen;
+      }
+
+      .container {
+        font-size: 40px;
+        min-height: 300px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        /* grid-gap: (column間隔 , row間隔) */
+        grid-gap: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+        使用 grid-gap 爲網格添加間距
+        grid-gap 屬性是前兩個挑戰中出現的 grid-row-gap 和 grid-column-gap 的簡寫屬性，它更方便使用。 如果 grid-gap 只有一個值，那麼這個值表示行與行之間、列與列之間的間距均爲這個值。 如果有兩個值，那麼第一個值表示行間距，第二個值表示列間距。
+<hr>        
+        請使用 grid-gap 屬性設置行間距爲 10px、列間距爲 20px。
+    <hr>    
+        
+      </pre>
+    <div class="container">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .item1 {
+        background: LightSkyBlue;
+      }
+      .item2 {
+        background: LightSalmon;
+      }
+      .item3 {
+        background: PaleTurquoise;
+      }
+      .item4 {
+        background: LightPink;
+      }
+      .item5 {
+        background: PaleGreen;
+      }
+
+      .container {
+        font-size: 40px;
+        min-height: 100px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+
+      .container2 {
+        font-size: 40px;
+        min-height: 100px;
+        width: 100%;
+        background: Silver;
+        display: grid;
+        /* undefined */
+
+        /* grid-template-columns: repeat(3, minmax(60px, 1fr)); */
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+
+        /* undefined */
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+        使用 auto-fit 創建彈性佈局
+        auto-fit 效果幾乎和 auto-fill 一樣。 
+        不同點僅在於，當容器的大小大於各網格項之和時，
+        auto-fill 會持續地在一端放入空行或空列，這樣就會使所有網格項擠到另一邊；
+        而 auto-fit 則不會在一端放入空行或空列，而是會將所有網格項拉伸至合適的大小。
+        
+        注意： 如果容器寬度不足以將所有網格項放在同一行，餘下的網格項將會移至新的一行。
+        <hr>
+        在第二個網格中，請用 auto-fit 和 repeat 來填充網格，
+        其中列寬的最小值爲 60px，最大值爲1fr。 
+        你可以調整最右側的預覽區來查看效果。
+      </pre>
+    <div class="container">
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+      <div class="item4">4</div>
+      <div class="item5">5</div>
+    </div>
+    <div class="container2">
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+      <div class="item4">4</div>
+      <div class="item5">5</div>
+    </div>
+  </body>
+</html>

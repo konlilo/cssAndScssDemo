@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            border-width: 5px;
+            border-color: #FF9933;
+            border-style: solid;
+            width: 300px;
+            height: 300px;
+        }
+        div{
+            border-width: 5px;
+            border-color: red;
+            border-style: solid;
+            width: 300px;
+            height: 300px;
+        }
+        #img1 {
+            object-fit: contain;
+            /* object-position: 0px 0px; */
+            object-position:center;
+            margin-left: 200px;
+        }
+        #div1 {
+            background-image: url('./img/sunny.jpg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-left: 200px;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <img src="img/sunny.jpg" alt="" id="img1">
+    <div id='div1'></div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>align-items</title>
+    <style>
+      #box-container {
+        background: gray;
+        display: flex;
+        height: 500px;
+        align-items: center;
+      }
+      #box-1 {
+        background-color: dodgerblue;
+        width: 200px;
+        font-size: 24px;
+      }
+
+      #box-2 {
+        background-color: orangered;
+        width: 200px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box-container">
+      <div id="box-1"><p>Hello</p></div>
+      <div id="box-2"><p>Goodbye</p></div>
+    </div>
+
+    <pre>
+        使用 align-items 屬性對齊元素
+align-items 屬性與 justify-content 類似。 回憶一下，justify-content 屬性使 flex 子元素沿主軸排列。 行的主軸是水平線，列的主軸是垂直線。
+
+Flex 容器中，與主軸垂直的叫做 cross axis（交叉軸）。 行的交叉軸是垂直的，列的交叉軸是水平的。
+
+CSS 中的 align-items 屬性用來定義 flex 子元素沿交叉軸的對齊方式。 對行來說，定義的是元素的上下對齊方式； 對列來說，是定義元素的左右對齊方式。
+
+align-items 的可選值包括：
+
+flex-start：從 flex 容器的起始位置開始對齊項目。 對行來說，把項目移至容器頂部； 對列來說，是把項目移至容器左邊。
+flex-end：從 flex 容器的終止位置開始對齊項目。 對行來說，把項目移至容器底部； 對列來說，把項目移至容器右邊。
+center：把項目居中放置。 對行來說，垂直居中（項目距離頂部和底部的距離相等）； 對列來說，水平居中（項目距離左邊和右邊的距離相等）。
+stretch：拉伸項目，填滿 flex 容器。 例如，排成行的項目從容器頂部拉伸到底部。 如未設置align-items的值，那麼這就是默認值。
+baseline：沿基線對齊。 基線是文本相關的概念，可以認爲它是字母排列的下端基準線。
+    </pre>
+  </body>
+</html>
